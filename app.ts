@@ -22,3 +22,9 @@ let hobbies2: any[] = ['Cooking', 'Sports'];
 hobbies2 = [100, 200]
 // If re-assign `hobbies2` with type of any other than array then we will get an error.
 // hobbies2 = 100;
+
+// TUPLES
+// Define a format of data as array of mixed type.
+let address: [string, number] = ['Superstreet', 99];
+// If re-assign with other format than the defining then we will get an error.
+// address = [99, 'Superstreet'];
