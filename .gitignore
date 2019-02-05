@@ -1,2 +1,5 @@
 # Builded file
 app.js
+
+# Dependencies
+node_modules

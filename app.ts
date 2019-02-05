@@ -28,3 +28,16 @@ hobbies2 = [100, 200]
 let address: [string, number] = ['Superstreet', 99];
 // If re-assign with other format than the defining then we will get an error.
 // address = [99, 'Superstreet'];
+
+// ENUM
+enum Color {
+  Gray,       // 0
+  Green,      // 1
+  Blue = 100, // 100
+  Red,        // 101 --> will be increment of previous value by 1.
+  Violet = 5, // 5
+  Salmon,     // 6
+}
+
+let myColor: Color = Color.Green;
+console.log(myColor);
