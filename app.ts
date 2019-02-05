@@ -41,3 +41,11 @@ enum Color {
 
 let myColor: Color = Color.Green;
 console.log(myColor);
+
+// ANY
+// Define `car` with type any
+let car: any = 'BMW';
+console.log(car);
+// So we can assign any type to `car`
+car = { brand: 'BMW', series: 3 };
+console.log(car);
