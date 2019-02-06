@@ -106,3 +106,10 @@ let complex: Complex = {
   },
 };
 console.log(complex.output(true));
+
+// UNION TYPES
+let myRealAge: number | string = 25;
+// So we can assign either string or number to `myRealAge`.
+myRealAge = '25';
+// But we can't assign any other into it.
+// myRealAge = true;
