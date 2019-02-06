@@ -118,3 +118,17 @@ myRealAge = '25';
 function neverReturns(): never {
   throw new Error('An error!');
 }
+
+// NULLABLE TYPES
+let canBeNull = 12;
+// If we enable option of `strictNullChecks` to `true` in `tsconfig.json`
+// This will show an error, because type of null will be strictly checked
+// We defined `canBeNull` to 12 that be type of number
+// Then we re-assign `canBeNull` to be type of `null` below
+// So this option will force TypeScript compiler to show an error
+// canBeNull = null;
+
+// But we can let `canBeNull` to be able to be assigned to null
+// By define with union type like this below
+let canBeNull2: number | null = 12;
+canBeNull2 = null;
