@@ -49,3 +49,28 @@ console.log(car);
 // So we can assign any type to `car`
 car = { brand: 'BMW', series: 3 };
 console.log(car);
+
+// FUNCTION TYPE
+function multiply(a: number, b: number): number {
+  return a * b;
+}
+
+function sayHello(): void {
+  console.log('Hello!');
+}
+
+// We define `myFunction` implicitly type any.
+let myFunction;
+// So we can assign any type to it.
+myFunction = sayHello;
+myFunction();
+myFunction = multiply;
+console.log(myFunction(2, 3));
+myFunction = 1;
+console.log(myFunction);
+
+let myMultiply: (a: number, b: number) => number;
+// This will show an error because () => void can't assign to `myMultyply`.
+// myMultiply = sayHello;
+myMultiply = multiply;
+console.log(myMultiply(2, 3));
