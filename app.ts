@@ -113,3 +113,8 @@ let myRealAge: number | string = 25;
 myRealAge = '25';
 // But we can't assign any other into it.
 // myRealAge = true;
+
+// NERVER
+function neverReturns(): never {
+  throw new Error('An error!');
+}
