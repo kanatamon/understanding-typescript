@@ -92,3 +92,17 @@ let userDataExplicitly: { name: string, age: number } = {
   name: 'N____',
   age: 25,
 }
+
+// COMPLEX OBJECT
+type Complex = {
+  data: number[],
+  output: (all: boolean) => number[],
+};
+
+let complex: Complex = {
+  data: [2, 3, 31],
+  output: function(all: boolean): number[] {
+    return this.data;
+  },
+};
+console.log(complex.output(true));
