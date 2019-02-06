@@ -74,3 +74,21 @@ let myMultiply: (a: number, b: number) => number;
 // myMultiply = sayHello;
 myMultiply = multiply;
 console.log(myMultiply(2, 3));
+
+// OBJECT
+let userData = {
+  name: 'Pond',
+  age: 25,
+};
+
+// This will show an error, because new assign value is not the same type as defined on the first place.
+// userData = {
+//   a: 'Kantapon',
+//   b: 25,
+// };
+
+// We can define with type explicitly like this.
+let userDataExplicitly: { name: string, age: number } = {
+  name: 'N____',
+  age: 25,
+}
