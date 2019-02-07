@@ -49,3 +49,86 @@ console.log(car);
 // So we can assign any type to `car`
 car = { brand: 'BMW', series: 3 };
 console.log(car);
+
+// FUNCTION TYPE
+function multiply(a: number, b: number): number {
+  return a * b;
+}
+
+function sayHello(): void {
+  console.log('Hello!');
+}
+
+// We define `myFunction` implicitly type any.
+let myFunction;
+// So we can assign any type to it.
+myFunction = sayHello;
+myFunction();
+myFunction = multiply;
+console.log(myFunction(2, 3));
+myFunction = 1;
+console.log(myFunction);
+
+let myMultiply: (a: number, b: number) => number;
+// This will show an error because () => void can't assign to `myMultyply`.
+// myMultiply = sayHello;
+myMultiply = multiply;
+console.log(myMultiply(2, 3));
+
+// OBJECT
+let userData = {
+  name: 'Pond',
+  age: 25,
+};
+
+// This will show an error, because new assign value is not the same type as defined on the first place.
+// userData = {
+//   a: 'Kantapon',
+//   b: 25,
+// };
+
+// We can define with type explicitly like this.
+let userDataExplicitly: { name: string, age: number } = {
+  name: 'N____',
+  age: 25,
+}
+
+// COMPLEX OBJECT
+type Complex = {
+  data: number[],
+  output: (all: boolean) => number[],
+};
+
+let complex: Complex = {
+  data: [2, 3, 31],
+  output: function(all: boolean): number[] {
+    return this.data;
+  },
+};
+console.log(complex.output(true));
+
+// UNION TYPES
+let myRealAge: number | string = 25;
+// So we can assign either string or number to `myRealAge`.
+myRealAge = '25';
+// But we can't assign any other into it.
+// myRealAge = true;
+
+// NERVER
+function neverReturns(): never {
+  throw new Error('An error!');
+}
+
+// NULLABLE TYPES
+let canBeNull = 12;
+// If we enable option of `strictNullChecks` to `true` in `tsconfig.json`
+// This will show an error, because type of null will be strictly checked
+// We defined `canBeNull` to 12 that be type of number
+// Then we re-assign `canBeNull` to be type of `null` below
+// So this option will force TypeScript compiler to show an error
+// canBeNull = null;
+
+// But we can let `canBeNull` to be able to be assigned to null
+// By define with union type like this below
+let canBeNull2: number | null = 12;
+canBeNull2 = null;
