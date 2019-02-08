@@ -1,0 +1,11 @@
+{
+  "name": "lesson-02-option-source-map",
+  "main": "app.js",
+  "scripts": {
+    "dev": "lite-server"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "lite-server": "^2.4.0"
+  }
+}

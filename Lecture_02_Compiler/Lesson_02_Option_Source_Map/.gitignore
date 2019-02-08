@@ -1,0 +1,6 @@
+# Builded files
+app.js
+app.js.map
+
+# Dependencies
+node_modules
