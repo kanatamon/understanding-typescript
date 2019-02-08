@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "es5",
+    "module": "commonjs",
+    "strict": true,
+    "noImplicitAny": false,
+    // When compiled failed normally you will still get compiled output
+    // But, If you want to prevent compiled output when an error occured
+    // Turn on the option `noEmitOnError` by setting it to `true`
+    "noEmitOnError": true
+  },
+  "exclude": ["node_modules"]
+}
