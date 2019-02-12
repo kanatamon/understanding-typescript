@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "lite-server"
+    "dev": "lite-server",
+    "compile": "tsc app.ts --outFile app.js"
   },
   "keywords": [],
   "author": "",
