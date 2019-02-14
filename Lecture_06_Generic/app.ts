@@ -76,3 +76,37 @@ const simpleMath = new SimpleMath<string>();
 simpleMath.base = '5';
 simpleMath.multiply = '5';
 console.log(simpleMath.calculate());
+
+
+
+// Multiple Generic
+class SimpleMath2<T extends number | string, U> {
+  base: T | null = null;
+  multiply: T | null = null;
+  universal: U | null = null;
+
+  calculate(): number {
+    const base = this.base ? +this.base : 0;
+    const multiply = this.multiply ? +this.multiply : 0;
+    return base * multiply;
+  }
+
+  expose(): U {
+    if (this.universal) {
+      return this.universal;
+    }
+    throw Error('the property \'universal\' is null!');
+  }
+}
+
+const simpleMath2 = new SimpleMath2<string, string>();
+simpleMath2.base = '5';
+simpleMath2.multiply = '5';
+console.log(simpleMath2.calculate());
+try {
+  console.log(simpleMath2.expose().trim());
+} catch (e) {
+  console.error(e);
+}
+simpleMath2.universal = '     Nanthapat Phondee     ';
+console.log(simpleMath2.expose().trim());
