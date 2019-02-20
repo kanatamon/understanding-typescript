@@ -1,0 +1,21 @@
+{
+  "name": "lecture-09-using-with-qulp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "lite-server",
+    "build": "gulp"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/jquery": "^3.3.29"
+  },
+  "devDependencies": {
+    "gulp": "^4.0.0",
+    "gulp-typescript": "^5.0.0",
+    "typescript": "^3.3.3"
+  }
+}
