@@ -1,0 +1,9 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es5",
+    // "module": "commonjs",  --> webpack will import files we need and bundle fo us             
+    // "sourceMap": true,     --> webpack will do this for us
+    "strict": true
+  }
+}
